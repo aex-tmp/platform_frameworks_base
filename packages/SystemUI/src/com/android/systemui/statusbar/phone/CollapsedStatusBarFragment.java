@@ -141,8 +141,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mStatusBarComponent = Dependency.get(StatusBar.class);
         mCommandQueue = Dependency.get(CommandQueue.class);
         mHandler = new Handler();
-        mSettingsObserver = new SettingsObserver(mHandler);
-        mSettingsObserver.observe();
     }
 
     @Override
@@ -182,6 +180,8 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         showClock(false);
         initEmergencyCryptkeeperText();
         initOperatorName();
+        mSettingsObserver = new SettingsObserver(mHandler);
+        mSettingsObserver.observe();
         updateSettings(false);
     }
 
