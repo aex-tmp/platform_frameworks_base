@@ -19,7 +19,7 @@ package com.android.internal.custom.hardware;
 
 import android.util.Log;
 
-import com.android.internal.util.custom.FileUtils;
+import com.android.internal.util.aospextended.FileUtils;
 
 /**
  * Adaptive backlight support (this refers to technologies like NVIDIA SmartDimmer,

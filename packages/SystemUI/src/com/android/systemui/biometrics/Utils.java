@@ -37,7 +37,7 @@ import com.android.internal.widget.LockPatternUtils;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import com.android.internal.util.custom.faceunlock.FaceUnlockUtils;
+import com.android.internal.util.aospextended.faceunlock.FaceUnlockUtils;
 
 public class Utils {
 

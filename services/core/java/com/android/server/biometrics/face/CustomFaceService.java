@@ -46,9 +46,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.android.internal.util.custom.faceunlock.IFaceService;
-import com.android.internal.util.custom.faceunlock.IFaceServiceReceiver;
-import com.android.internal.util.custom.faceunlock.FaceUnlockUtils;
+import com.android.internal.util.aospextended.faceunlock.IFaceService;
+import com.android.internal.util.aospextended.faceunlock.IFaceServiceReceiver;
+import com.android.internal.util.aospextended.faceunlock.FaceUnlockUtils;
 
 /**
  * @hide

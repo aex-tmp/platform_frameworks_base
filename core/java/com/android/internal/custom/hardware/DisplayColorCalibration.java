@@ -17,7 +17,7 @@
 
 package com.android.internal.custom.hardware;
 
-import com.android.internal.util.custom.FileUtils;
+import com.android.internal.util.aospextended.FileUtils;
 
 public class DisplayColorCalibration {
 

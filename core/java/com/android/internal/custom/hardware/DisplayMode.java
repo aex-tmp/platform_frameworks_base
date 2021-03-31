@@ -19,8 +19,8 @@ package com.android.internal.custom.hardware;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.android.internal.util.custom.Concierge;
-import com.android.internal.util.custom.Concierge.ParcelInfo;
+import com.android.internal.util.aospextended.Concierge;
+import com.android.internal.util.aospextended.Concierge.ParcelInfo;
 
 /**
  * Display Modes API

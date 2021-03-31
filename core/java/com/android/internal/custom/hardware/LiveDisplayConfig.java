@@ -30,8 +30,8 @@ import java.util.Arrays;
 import java.util.BitSet;
 import java.util.List;
 
-import com.android.internal.util.custom.Concierge;
-import com.android.internal.util.custom.Concierge.ParcelInfo;
+import com.android.internal.util.aospextended.Concierge;
+import com.android.internal.util.aospextended.Concierge.ParcelInfo;
 
 /**
  * Holder class for LiveDisplay static configuration.

@@ -35,7 +35,7 @@ import java.util.BitSet;
 import com.android.internal.custom.hardware.LineageHardwareManager;
 import com.android.internal.custom.hardware.LiveDisplayManager;
 import android.provider.Settings;
-import com.android.internal.util.custom.ColorUtils;
+import com.android.internal.util.aospextended.ColorUtils;
 
 import static com.android.internal.custom.hardware.LiveDisplayManager.MODE_AUTO;
 import static com.android.internal.custom.hardware.LiveDisplayManager.MODE_DAY;
@@ -95,7 +95,7 @@ public class ColorTemperatureController extends LiveDisplayFeature {
                 mContext.getResources().getInteger(
                         com.android.internal.R.integer.config_maxColorTemperature));
 
-        mColorBalanceCurve = com.android.internal.util.custom.MathUtils.powerCurve(
+        mColorBalanceCurve = com.android.internal.util.aospextended.MathUtils.powerCurve(
                 mColorTemperatureRange.getLower(),
                 mDefaultDayTemperature,
                 mColorTemperatureRange.getUpper());
@@ -258,7 +258,7 @@ public class ColorTemperatureController extends LiveDisplayFeature {
      * correct configuration at the device level!
      */
     private int mapColorTemperatureToBalance(int temperature) {
-        double z = com.android.internal.util.custom.MathUtils.powerCurveToLinear(mColorBalanceCurve, temperature);
+        double z = com.android.internal.util.aospextended.MathUtils.powerCurveToLinear(mColorBalanceCurve, temperature);
         return Math.round(MathUtils.lerp((float)mColorBalanceRange.getLower(),
                 (float)mColorBalanceRange.getUpper(), (float)z));
     }

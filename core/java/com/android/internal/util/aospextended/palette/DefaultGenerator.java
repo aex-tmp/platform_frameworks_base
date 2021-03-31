@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.android.internal.util.custom.palette;
+package com.android.internal.util.aospextended.palette;
 
 import java.util.List;
 
-import com.android.internal.util.custom.palette.Palette.Swatch;
+import com.android.internal.util.aospextended.palette.Palette.Swatch;
 
 /**
  * @hide

@@ -127,7 +127,7 @@ import java.util.function.Consumer;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import com.android.internal.util.custom.faceunlock.FaceUnlockUtils;
+import com.android.internal.util.aospextended.faceunlock.FaceUnlockUtils;
 
 /**
  * Watches for updates that may be interesting to the keyguard, and provides

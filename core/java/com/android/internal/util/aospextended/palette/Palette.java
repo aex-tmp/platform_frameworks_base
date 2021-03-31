@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.internal.util.custom.palette;
+package com.android.internal.util.aospextended.palette;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;
