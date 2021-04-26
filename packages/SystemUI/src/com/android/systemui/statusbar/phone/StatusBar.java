@@ -4494,9 +4494,6 @@ public class StatusBar extends SystemUI implements DemoMode,
                     Settings.System.LOCKSCREEN_MEDIA_BLUR),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.SHOW_LOCKSCREEN_MEDIA_ART),
-                    false, this, UserHandle.USER_ALL);
-            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_FOOTER_WARNINGS),
                     false, this, UserHandle.USER_ALL);
             /*resolver.registerContentObserver(Settings.System.getUriFor(
@@ -4547,9 +4544,6 @@ public class StatusBar extends SystemUI implements DemoMode,
                     Settings.System.LOCKSCREEN_MEDIA_BLUR))) {
                 setLockScreenMediaBlurLevel();
             } else if (uri.equals(Settings.System.getUriFor(
-                    Settings.System.SHOW_LOCKSCREEN_MEDIA_ART))) {
-                setLockScreenMediaArt();
-            } else if (uri.equals(Settings.System.getUriFor(
                     Settings.System.QS_FOOTER_WARNINGS))) {
                 setQsPanelOptions();
             } else if (uri.equals(Settings.System.getUriFor(
@@ -4571,7 +4565,6 @@ public class StatusBar extends SystemUI implements DemoMode,
             setHeadsUpBlacklist();
             setStatusBarWindowViewOptions();
             setLockScreenMediaBlurLevel();
-            setLockScreenMediaArt();
             setQsPanelOptions();
             setScreenBrightnessMode();
             setUseLessBoringHeadsUp();
@@ -4647,12 +4640,6 @@ public class StatusBar extends SystemUI implements DemoMode,
     private void setLockScreenMediaBlurLevel() {
         if (mMediaManager != null) {
             mMediaManager.setLockScreenMediaBlurLevel();
-        }
-    }
-
-    private void setLockScreenMediaArt() {
-        if (mMediaManager != null) {
-            mMediaManager.setLockScreenMediaArt();
         }
     }
 
