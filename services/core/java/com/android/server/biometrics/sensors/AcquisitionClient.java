@@ -31,9 +31,6 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Slog;
 
-import com.android.internal.util.ArrayUtils;
-import com.android.server.biometrics.sensors.fingerprint.FODHelper;
-
 /**
  * Abstract {@link HalClientMonitor} subclass that operations eligible/interested in acquisition
  * messages should extend.
@@ -87,16 +84,8 @@ public abstract class AcquisitionClient<T> extends HalClientMonitor<T> implement
 
     @Override
     public void onError(int errorCode, int vendorCode) {
-        if (isUdfps())
-            FODHelper.onError(errorCode, vendorCode);
         // Errors from the HAL always finish the client
         onErrorInternal(errorCode, vendorCode, true /* finish */);
-    }
-
-    public boolean isUdfps() {
-        int[] udfpsProps = getContext().getResources().getIntArray(
-                com.android.internal.R.array.config_udfps_sensor_props);
-        return !ArrayUtils.isEmpty(udfpsProps);
     }
 
     /**
@@ -173,8 +162,6 @@ public abstract class AcquisitionClient<T> extends HalClientMonitor<T> implement
      * @param acquiredInfo info about the current image acquisition
      */
     public void onAcquired(int acquiredInfo, int vendorCode) {
-        if (isUdfps())
-            FODHelper.onAcquired(acquiredInfo, vendorCode);
         // Default is to always send acquire messages to clients.
         onAcquiredInternal(acquiredInfo, vendorCode, true /* shouldSend */);
     }
