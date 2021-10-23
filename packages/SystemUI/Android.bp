@@ -96,7 +96,6 @@ android_library {
         "dagger2",
         "jsr330",
         "lottie",
-        "vendor.lineage.biometrics.fingerprint.inscreen-V1.0-java",
         "tensorflowlite_java",
         "colorkt",
         "themelib",
@@ -191,7 +190,6 @@ android_library {
         "dagger2",
         "jsr330",
         "WindowManager-Shell",
-        "vendor.lineage.biometrics.fingerprint.inscreen-V1.0-java",
     ],
     libs: [
         "android.test.runner",
