@@ -5895,6 +5895,17 @@ public final class Settings {
         public static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
         /**
+         * @hide
+         */
+        public static final String USE_OLD_MOBILETYPE = "use_old_mobiletype";
+
+        /**
+         * Whether to play haptic feedback when touching udfps icon
+         * @hide
+         */
+        public static final String UDFPS_HAPTIC_FEEDBACK = "udfps_haptic_feedback";
+
+        /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
          *
@@ -5905,12 +5916,6 @@ public final class Settings {
          */
         public static final String[] LEGACY_RESTORE_SETTINGS = {
         };
-
-
-        /**
-         * @hide
-         */
-        public static final String USE_OLD_MOBILETYPE = "use_old_mobiletype";        
 
         /**
          * These are all public system settings
