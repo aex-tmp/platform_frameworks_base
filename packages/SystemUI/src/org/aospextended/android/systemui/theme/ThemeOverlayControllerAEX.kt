@@ -35,6 +35,7 @@ import com.android.systemui.dump.DumpManager
 import com.android.systemui.flags.FeatureFlags
 import com.android.systemui.keyguard.WakefulnessLifecycle
 import com.android.systemui.settings.UserTracker
+import com.android.systemui.statusbar.policy.ConfigurationController
 import com.android.systemui.statusbar.policy.DeviceProvisionedController
 import com.android.systemui.theme.ThemeOverlayApplier
 import com.android.systemui.theme.ThemeOverlayController
@@ -72,6 +73,7 @@ class ThemeOverlayControllerAEX @Inject constructor(
     featureFlags: FeatureFlags,
     wakefulnessLifecycle: WakefulnessLifecycle,
     private val tunerService: TunerService,
+    configurationController: ConfigurationController,
 ) : ThemeOverlayController(
     context,
     broadcastDispatcher,
@@ -87,6 +89,7 @@ class ThemeOverlayControllerAEX @Inject constructor(
     dumpManager,
     featureFlags,
     wakefulnessLifecycle,
+    configurationController,
 ), Tunable {
     private lateinit var cond: Zcam.ViewingConditions
     private lateinit var targets: MaterialYouTargets
